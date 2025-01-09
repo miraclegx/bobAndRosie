@@ -1,4 +1,6 @@
 -- started jan 7th 2025
+  
+  wf  = require('windfield/windfield')
 
   Game = require('gameStates/game')
   bobOrRosie = require('bobOrRosie')
@@ -6,7 +8,7 @@
   dt = love.timer.getDelta()
   
   currentScene = game
-  world = love.physics.newWorld(0,0)
+  world = wf.newWorld(0,0,1)
   
 	function love.load()
     currentScene.load()
